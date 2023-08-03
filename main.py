@@ -3,14 +3,11 @@ from data_manager import DataManager
 from datetime import datetime, timedelta
 from flight_search import FlightSearch
 from notification_manager import NotificationManager
-from pprint import pprint
-
 load_dotenv()
 data_manager = DataManager()
 sheet_data = data_manager.get_data()
 flight_search = FlightSearch()
 notification_manager = NotificationManager()
-# pprint(sheet_data)
 
 if sheet_data[0]["iataCode"] == "":
     for data in sheet_data:
